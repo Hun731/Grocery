@@ -1,0 +1,139 @@
+body {
+  background: linear-gradient(
+    to right,
+    #fed5b2,
+    #ffdab9,
+    #ffdfc0,
+    #ffe4c4,
+    #ffe9c9,
+    #ffeed0,
+    #fff3d6,
+    #fff8db,
+    #fffcdf
+  );
+}
+
+.Ic{
+    margin: 10px 20px;
+}
+.explore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.explore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("Explore.webp") no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(10px);
+}
+
+.exploreText {
+  flex: 1;
+  z-index: 1; 
+  color: #fff;
+  height: auto;
+}
+
+.exploreText h2,
+.exploreText p,
+.exploreText a {
+  color: inherit;
+}
+
+.explore-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background: linear-gradient(to right, #4caf50, #45a049);
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  width: 300px;
+  min-width: 200px;
+}
+
+.card img {
+  max-width: 250px;
+  height: auto;
+  border: 0px solid;
+  border-radius: 10%;
+}
+.card:hover {
+  transform: scale(1.10);
+}
+
+.card ul,
+.card a,
+.card p {
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 2px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card:hover ul,
+.card:hover a,
+.card:hover p {
+  display: block;
+  opacity: 1;
+  color: black;
+}
+
+.card:hover a {
+  border: 0px solid;
+  border-radius: 5px;
+  color: white;
+  background: linear-gradient(to right, #4caf50, #45a049);
+}
+@media screen and (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+footer {
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}
